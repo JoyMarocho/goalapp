@@ -1,4 +1,11 @@
 import { Component } from '@angular/core';
+import { Goal } from './goal';
+
+export class AppComponent{
+  goals
+}
+
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +13,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'goalapp';
+  goals:string[];
+
+  constructor(){
+    this.goals = ['Watch finding Jojo', 'Buy Cookies', 'Get new Phone']
+
+  }
 }
